@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your memories</title>
+  <link rel="stylesheet" href="style.css"> <!-- เชื่อม CSS -->
+</head>
+<body>
+
+  <header>
+    <h1>Your memories</h1>
+    <div class="top-icons">
+      <span id="addAlbum">✏️</span>
+      <span id="addNote">📝</span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button>All</button>
+    <button class="add">+</button>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <!-- อัลบั้มตัวอย่าง -->
+    <div class="album">
+      <img src="https://picsum.photos/200/200?random=1" alt="">
+      <p>My trip</p>
+    </div>
+    <div class="album">
+      <img src="https://picsum.photos/200/200?random=2" alt="">
+      <p>Family</p>
+    </div>
+  </div>
+
+  <!-- Modal เพิ่มอัลบั้ม -->
+  <div class="modal" id="albumModal">
+    <div class="modal-content">
+      <h3>เพิ่มอัลบั้มใหม่</h3>
+      <input type="text" id="albumName" placeholder="ใส่ชื่ออัลบั้ม">
+      <button id="saveAlbum">บันทึก</button>
+    </div>
+  </div>
+
+  <!-- พื้นที่โน้ต -->
+  <div class="note-area" id="noteArea">
+    <div class="note-tools">
+      <input type="color" id="drawColor" value="#000000">
+      <button id="clearCanvas">ลบ</button>
+      <button onclick="closeNote()">ปิด</button>
+    </div>
+    <textarea id="noteText" placeholder="เขียนโน้ตของคุณ..."></textarea>
+    <canvas id="noteCanvas" width="400" height="300"></canvas>
+  </div>
+
+  <script src="script.js"></script> <!-- เชื่อม JavaScript -->
+</body>
+</html>
